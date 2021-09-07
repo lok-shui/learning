@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" charset="utf-8"/>
+</head>
+
+<body>
+
+<h3>测试</h3>
+<input type="button" value="播放语音" onclick="startSpeaking('我们来看一下题目吧，从图中我们可以看到。')"/></br></br>
+<input type="button" value="暂停语音" onclick="pauseSpeaking()"/></br></br>
+<input type="button" value="继续语音" onclick="resumeSpeaking()"/></br></br>
+<input type="button" value="获取进度" onclick="getSpeakProgress()"/></br></br>
+<input type="button" value="获取时长" onclick="getAudioLength()"/></br></br>
+<!--<div />-->
+<div id="insert"></div>
+
+<!--<script type="text/javascript" src="test.js"></script>-->
+
+</body>
+
+<script type="text/javascript">
+var x = 0;
+function insert(json){
+   var insertText = `<table><tr><td>${json}</td></tr></table>`;
+   document.getElementById("insert").innerHTML += insertText;
+}
+
+function callback(data){
+console.log(data);
+  insert(data.text+'--action--'+data.action+'--speakProgress--'+data.speakProgress+'--audioLength--'+data.audioLength);
+  if(data.action==5){
+     if(x==0){
+      startSpeaking('AG比上GD等于4比1');
+    }else if(x==1){
+      startSpeaking('BD比DC等于2比3');
+    }else if(x==2){
+     startSpeaking('则AE比EC的值是多少呢');
+     }else if(x==3){
+     startSpeaking('这道题主要考察，平行线分线段成比例');
+     }else if(x==4){
+     startSpeaking('这个知识点，我们想一想，这类题一般怎么做');
+     }
+     x++;
+  }
+}
+function startSpeaking(text) {
+    android.startSpeaking(text);
+}
+
+function stopSpeaking() {
+ android.stopSpeaking();
+}
+function pauseSpeaking() {
+ android.pauseSpeaking();
+}
+function resumeSpeaking() {
+ android.resumeSpeaking();
+}
+
+function getSpeakProgress() {
+ var progress=`进度${android.getSpeakProgress()}`
+ insert(progress);
+}
+function getAudioLength() {
+ var audioLength=`时长${android.getAudioLength()}`
+ insert(audioLength);
+}
+
+
+
+</script>
+</html>

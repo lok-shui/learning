@@ -1,0 +1,70 @@
+@import "~ant-design-vue/dist/antd.less";   // 引入官方提供的 less 样式入口文件
+
+@primary-color: #31C37C;                         // 全局主色
+@link-color: #31C37C;                            // 链接色
+@success-color: #52c41a;                         // 成功色
+@warning-color: #faad14;                         // 警告色
+@error-color: #f5222d;                           // 错误色
+@font-size-base: 14px;                             // 主字号
+@heading-color: rgba(0, 0, 0, .85);              // 标题色
+@text-color: rgba(0, 0, 0, .65);                 // 主文本色
+@text-color-secondary : rgba(0, 0, 0, .45);      // 次文本色
+@disabled-color : rgba(0, 0, 0, .25);            // 失效色
+@border-radius-base: 4px;                          // 组件/浮层圆角
+@border-color-base: #d9d9d9;                     // 边框色
+@box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
+
+.ant-menu-vertical .ant-menu-item:after, .ant-menu-vertical-left .ant-menu-item:after, .ant-menu-vertical-right .ant-menu-item:after, .ant-menu-inline .ant-menu-item:after {
+  left: 0px;
+  right: auto;
+}
+
+// checkbox checked
+.ant-tree-checkbox-checked .ant-tree-checkbox-inner {
+  background-color: #31C37C !important;
+  border-color: #31C37C !important;
+}
+// checkbox checked text
+.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+  background-color: #daf5e4 !important;
+}
+.ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover {
+  color:rgba(49,195,124,1);
+}
+.ta-assignment-essay-limit.ta-form-item-select.ant-input-number:hover {
+  // background-color: #31C37C !important;
+  border-color: #31C37C !important;  
+  box-shadow: rgba(49,195,124,0.2) !important;
+}
+.ta-assignment-essay-limit.ta-form-item-select.ant-input-number-focused {
+  // background-color: #31C37C !important;
+  border-color: #31C37C !important;  
+  box-shadow: rgba(49,195,124,0.2) !important;  
+}
+.ant-input-number-focused {
+  box-shadow: rgba(49,195,124,0.2) !important;  
+}
+// nav selected
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  font-weight:500;
+}
+
+.ta-exercise-index-content.ant-layout-content, .ta-library-main.ant-layout-content,  .ta-exercise-share-main.ant-layout-content{
+  background-color:rgba(255,255,255,1) !important;
+  border-top: rgba(231,238,242,1) solid 1px!important;
+  // border-top-width: 10px !important;
+}
+
+.ta-exercise-backet-content.ant-layout-content {
+  background:rgba(247,247,247,1) !important;
+}
+.ant-btn-danger {
+  color: #fff;
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+.ant-btn-danger:focus {
+  color: #fff;
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
